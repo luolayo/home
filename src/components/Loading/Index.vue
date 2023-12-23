@@ -1,25 +1,22 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { useLoading } from '../../hooks/useLoading/Index'
 
-const load = ref(false)
-setTimeout(() => {
-  load.value = true
-}, 300)
+const { loading } = useLoading()
 </script>
 
 <template>
   <div class="absolute h-screen w-screen overflow-hidden z-10">
     <div
       class="h-screen w-1/2 absolute bg-[#151320] top-0 left-0 animate__animated"
-      :class="{ animate__fadeOutLeft: load }"
+      :class="{ animate__fadeOutLeft: loading }"
     ></div>
     <div
       class="h-screen w-1/2 absolute bg-[#151320] top-0 right-0 animate__animated"
-      :class="{ animate__fadeOutRight: load }"
+      :class="{ animate__fadeOutRight: loading }"
     ></div>
     <div
       class="flex flex-col h-screen w-full items-center justify-center absolute animate__animated"
-      :class="{ animate__zoomOut: load }"
+      :class="{ animate__zoomOut: loading }"
     >
       <div class="w-24 h-24 rounded-full perspective">
         <div class="children"></div>

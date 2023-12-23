@@ -1,4 +1,4 @@
-<script lang="ts">
+<script setup lang="ts">
 </script>
 <template>
   <main
@@ -8,20 +8,25 @@
     <div class="text-xl py-8">众里寻她千百度，那人不在灯火阑珊处</div>
     <div class="flex md:flex-row flex-wrap md:w-[500px] flex-col">
       <div class="card">
-        <v-icon name="hi-home" />
-        <span class="text">Home</span>
+        <a href="/">
+          <v-icon name="hi-home" />
+          <span class="text">Home</span>
+        </a>
       </div>
       <div class="card">
-        <v-icon name="ri-qq-line" />
-        <span class="text">Blog</span>
+        <a href="https://qm.qq.com/cgi-bin/qm/qr?k=1JIJUtOxMtYu56q2tpVlV1VwG-R4lVsI&s=1#">
+          <v-icon name="ri-qq-line" /> <span class="text">QQ</span></a
+        >
       </div>
       <div class="card">
-        <v-icon name="fa-blogger-b" />
-        <span class="text">QQ</span>
+        <a href="https://www.luola.me">
+          <v-icon name="fa-blogger-b" /> <span class="text">Blog</span></a
+        >
       </div>
       <div class="card">
-        <v-icon name="bi-github" />
-        <span class="text">Github</span>
+        <a href="https://github.com/luolayo/">
+          <v-icon name="bi-github" /> <span class="text">Github</span></a
+        >
       </div>
     </div>
   </main>
