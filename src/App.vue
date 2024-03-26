@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import Loading from './components/loading/Index.vue'
+import Loading from './components/Loading/Index.vue'
 import Background from './components/Background/Index.vue'
 import Main from './components/Main/Index.vue'
 import Footer from './components/footer/Index.vue'
-import { useLoading } from './hooks/useLoading/Index'
+import { useLoading } from '@/hooks/useLoading'
 import { ref,watch } from 'vue'
 const { loading } = useLoading()
 const show = ref(true)
-watch(loading, async (val) => {
+watch(loading, async () => {
   setTimeout(() => {
     show.value = false
   }, 500);

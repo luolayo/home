@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useLoading } from '../../hooks/useLoading/Index'
+import { useLoading } from '@/hooks/useLoading'
 
 const { loading } = useLoading()
 </script>
