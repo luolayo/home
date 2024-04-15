@@ -12,6 +12,7 @@ watch(loading, async () => {
     show.value = false
   }, 500);
 })
+document.title = '罗拉哟'
 </script>
 
 <template>
